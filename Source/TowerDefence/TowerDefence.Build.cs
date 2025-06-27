@@ -16,7 +16,8 @@ public class TowerDefence : ModuleRules
 			"InputCore",
 			"EnhancedInput",
 			"UMG",
-			"AIModule"
+			"AIModule",
+			"SimpleScreenMove",
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] { });

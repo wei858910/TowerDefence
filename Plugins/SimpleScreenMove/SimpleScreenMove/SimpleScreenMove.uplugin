@@ -1,0 +1,23 @@
+﻿{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "SimpleScreenMove",
+  "Description": "鼠标在窗口边缘 时窗口移动插件",
+  "Category": "Other",
+  "CreatedBy": "Wei",
+  "CreatedByURL": "",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "CanContainContent": true,
+  "IsBetaVersion": false,
+  "IsExperimentalVersion": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "SimpleScreenMove",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}
