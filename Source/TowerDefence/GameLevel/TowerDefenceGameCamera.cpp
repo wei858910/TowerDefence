@@ -3,30 +3,29 @@
 
 #include "TowerDefenceGameCamera.h"
 
+#include "Camera/CameraComponent.h"
+#include "Components/BoxComponent.h"
+#include "GameFramework/SpringArmComponent.h"
+
 
 // Sets default values
 ATowerDefenceGameCamera::ATowerDefenceGameCamera()
 {
-	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
+
+	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
+	CameraBoom->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	CameraBoom->TargetArmLength = 800.f;
+	CameraBoom->SetRelativeRotation(FRotator(-60.0, 0.0, 0.0));
+
+	MainCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("MainCamera"));
+	MainCamera->AttachToComponent(CameraBoom, FAttachmentTransformRules::KeepRelativeTransform);
+
+	MarkBox = CreateDefaultSubobject<UBoxComponent>(TEXT("MarkBox"));
+	MarkBox->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 }
 
-// Called when the game starts or when spawned
 void ATowerDefenceGameCamera::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
-
-// Called every frame
-void ATowerDefenceGameCamera::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-}
-
-// Called to bind functionality to input
-void ATowerDefenceGameCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-}
-
