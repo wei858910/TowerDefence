@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/HUD.h"
-#include "TowerDefenceGameLevelHUD.generated.h"
+#include "TowerDefenceMainLevelHUD.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class TOWERDEFENCE_API ATowerDefenceGameLevelHUD : public AHUD
+class TOWERDEFENCE_API ATowerDefenceMainLevelHUD : public AHUD
 {
 	GENERATED_BODY()
 };
