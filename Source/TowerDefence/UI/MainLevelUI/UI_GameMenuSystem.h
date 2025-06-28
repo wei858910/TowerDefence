@@ -25,7 +25,7 @@ class TOWERDEFENCE_API UUI_GameMenuSystem : public UUserWidget
 	UButton* GameSettingButton{};
 	
 	UPROPERTY(meta=(bindWidget))
-	UButton* QuitGameButton{};
+	UButton* GameQuitButton{};
 
 public:
 	

@@ -24,9 +24,9 @@ void UUI_GameMenuSystem::NativeConstruct()
         GameSettingButton->OnClicked.AddDynamic(this, &UUI_GameMenuSystem::GameSetting);
     }
 
-    if (QuitGameButton)
+    if (GameQuitButton)
     {
-        QuitGameButton->OnClicked.AddDynamic(this, &UUI_GameMenuSystem::QuitGame);
+        GameQuitButton->OnClicked.AddDynamic(this, &UUI_GameMenuSystem::QuitGame);
     }
 }
 
