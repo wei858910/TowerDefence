@@ -2,3 +2,8 @@
 
 
 #include "UI_ToolbarSystem.h"
+
+void UUI_ToolbarSystem::NativeConstruct()
+{
+    Super::NativeConstruct();
+}

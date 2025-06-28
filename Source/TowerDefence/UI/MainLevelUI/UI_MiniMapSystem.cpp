@@ -2,3 +2,8 @@
 
 
 #include "UI_MiniMapSystem.h"
+
+void UUI_MiniMapSystem::NativeConstruct()
+{
+    Super::NativeConstruct();
+}

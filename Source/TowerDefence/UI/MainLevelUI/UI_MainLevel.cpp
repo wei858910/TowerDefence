@@ -2,3 +2,8 @@
 
 
 #include "UI_MainLevel.h"
+
+void UUI_MainLevel::NativeConstruct()
+{
+    Super::NativeConstruct();
+}

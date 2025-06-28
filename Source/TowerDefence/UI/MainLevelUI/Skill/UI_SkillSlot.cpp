@@ -2,3 +2,12 @@
 
 
 #include "UI_SkillSlot.h"
+
+void UUI_SkillSlot::NativeConstruct()
+{
+    Super::NativeConstruct();
+}
+
+void UUI_SkillSlot::OnClickedWidget()
+{
+}

@@ -23,7 +23,7 @@ class TOWERDEFENCE_API UUI_SelectLevelButton : public UUserWidget
     UPROPERTY(meta = (BindWidget))
     class UButton* SelectLevelButton{};
 
-protected:
+public:
     virtual void NativeConstruct() override;
 
     UFUNCTION()

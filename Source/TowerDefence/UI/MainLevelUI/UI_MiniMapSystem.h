@@ -13,4 +13,7 @@ UCLASS()
 class TOWERDEFENCE_API UUI_MiniMapSystem : public UUserWidget
 {
 	GENERATED_BODY()
+
+public:
+	virtual void NativeConstruct() override;
 };

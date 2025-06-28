@@ -13,4 +13,10 @@ UCLASS()
 class TOWERDEFENCE_API UUI_GameInfoPrintSystem : public UUserWidget
 {
 	GENERATED_BODY()
+
+	UPROPERTY(meta=(BindWidget))
+	class UTextBlock* TowerDefenceGameLog{};
+
+public:
+	virtual void NativeConstruct() override;
 };
