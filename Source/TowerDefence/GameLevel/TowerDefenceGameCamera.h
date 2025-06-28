@@ -13,20 +13,26 @@ class USpringArmComponent;
 UCLASS()
 class TOWERDEFENCE_API ATowerDefenceGameCamera : public APawn
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Camera", meta=(AllowPrivateAccess="true"))
-	USpringArmComponent* CameraBoom;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Camera", meta=(AllowPrivateAccess="true"))
+    USpringArmComponent* CameraBoom;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Camera", meta=(AllowPrivateAccess="true"))
-	UCameraComponent* MainCamera;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Camera", meta=(AllowPrivateAccess="true"))
+    UCameraComponent* MainCamera;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Camera", meta=(AllowPrivateAccess="true"))
-	UBoxComponent* MarkBox;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Camera", meta=(AllowPrivateAccess="true"))
+    UBoxComponent* MarkBox;
+
+    float CameraZoomMaxArmLength{4000.f};
+    float CameraZoomMinArmLength{400.f};
+    float CameraZoomSpeed{150.f};
 
 public:
-	ATowerDefenceGameCamera();
+    ATowerDefenceGameCamera();
+
+    void Zoom(bool bDirection);
 
 protected:
-	virtual void BeginPlay() override;
+    virtual void BeginPlay() override;
 };

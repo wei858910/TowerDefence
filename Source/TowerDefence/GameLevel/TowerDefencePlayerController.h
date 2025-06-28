@@ -6,6 +6,10 @@
 #include "GameFramework/PlayerController.h"
 #include "TowerDefencePlayerController.generated.h"
 
+struct FInputActionValue;
+class UInputMappingContext;
+class UInputAction;
+
 UCLASS()
 class TOWERDEFENCE_API ATowerDefencePlayerController : public APlayerController
 {
@@ -18,9 +22,19 @@ public:
 
     virtual void Tick(float DeltaSeconds) override;
 
+    void MouseWheelAxis(FInputActionValue& ActionValue);
+    
+    virtual void SetupInputComponent() override;
+
 protected:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Screen", meta=(AllowPrivateAccess="true"))
     float ScreenMoveSpeed = 50.f;
+
+    UPROPERTY(EditdefaultsOnly, Category="Input", meta=(AllowPrivateAccess="true"))
+    TObjectPtr<UInputMappingContext> IMC_TowerDefence;
+    
+    UPROPERTY(EditdefaultsOnly, Category="Input", meta=(AllowPrivateAccess="true"))
+    TObjectPtr<UInputAction> IA_MouseWheel;
 
 protected:
     // 限制鼠标在窗口内移动
