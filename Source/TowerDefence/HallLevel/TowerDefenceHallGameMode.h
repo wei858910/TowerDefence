@@ -13,4 +13,6 @@ UCLASS()
 class TOWERDEFENCE_API ATowerDefenceHallGameMode : public AGameMode
 {
 	GENERATED_BODY()
+public:
+	ATowerDefenceHallGameMode();
 };
