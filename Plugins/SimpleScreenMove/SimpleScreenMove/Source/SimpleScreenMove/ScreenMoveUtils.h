@@ -18,7 +18,7 @@ class SIMPLESCREENMOVE_API FScreenMoveUtils
 {
 public:
     static bool ListenScreenMove(const APlayerController* PlayerController, float ScreenMoveSpeed = 100.f);
-
+    
 private:
     static EScreenMoveState CursorMove(const APlayerController* PlayerController);
 

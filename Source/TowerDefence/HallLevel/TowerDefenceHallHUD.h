@@ -3,13 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "TowerDefence/UI/TowerDefenceHUDBase.h"
+#include "GameFramework/HUD.h"
 #include "TowerDefenceHallHUD.generated.h"
 
 class UUI_MainHall;
 
 UCLASS()
-class TOWERDEFENCE_API ATowerDefenceHallHUD : public ATowerDefenceHUDBase
+class TOWERDEFENCE_API ATowerDefenceHallHUD : public AHUD
 {
     GENERATED_BODY()
 
