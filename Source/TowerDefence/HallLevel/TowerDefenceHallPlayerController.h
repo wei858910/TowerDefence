@@ -12,5 +12,8 @@
 UCLASS()
 class TOWERDEFENCE_API ATowerDefenceHallPlayerController : public APlayerController
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
+
+public:
+    ATowerDefenceHallPlayerController();
 };

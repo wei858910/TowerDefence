@@ -2,3 +2,8 @@
 
 
 #include "TowerDefenceHallPlayerController.h"
+
+ATowerDefenceHallPlayerController::ATowerDefenceHallPlayerController()
+{
+    bShowMouseCursor = true;
+}
