@@ -12,5 +12,20 @@
 UCLASS()
 class TOWERDEFENCE_API UUI_SelectLevelButton : public UUserWidget
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
+
+    UPROPERTY(meta = (BindWidget))
+    class UBorder* SelectBorder{};
+
+    UPROPERTY(meta = (BindWidget))
+    class UProgressBar* LevelProBar{};
+
+    UPROPERTY(meta = (BindWidget))
+    class UButton* SelectLevelButton{};
+
+protected:
+    virtual void NativeConstruct() override;
+
+    UFUNCTION()
+    void SelectLevel();
 };

@@ -6,11 +6,14 @@
 #include "GameFramework/GameMode.h"
 #include "TowerDefenceSelectLevelGameMode.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class TOWERDEFENCE_API ATowerDefenceSelectLevelGameMode : public AGameMode
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
+
+public:
+    ATowerDefenceSelectLevelGameMode();
+
+protected:
+    virtual void BeginPlay() override;
 };
