@@ -7,9 +7,7 @@
 #include "TowerDefenceSelectLevelHUD.generated.h"
 
 class UUI_MainSelectLevel;
-/**
- * 
- */
+
 UCLASS()
 class TOWERDEFENCE_API ATowerDefenceSelectLevelHUD : public AHUD
 {
@@ -20,7 +18,7 @@ public:
     virtual void BeginPlay() override;
 
 private:
-    TSubclassOf<UUserWidget> UIMainSelectLevelClass{};
+    TSubclassOf<UUI_MainSelectLevel> UIMainSelectLevelClass{};
     
     UPROPERTY()
     UUI_MainSelectLevel* UIMainSelectLevel{};

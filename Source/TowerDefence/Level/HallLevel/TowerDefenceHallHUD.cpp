@@ -8,7 +8,7 @@
 
 ATowerDefenceHallHUD::ATowerDefenceHallHUD()
 {
-    const ConstructorHelpers::FClassFinder<UUserWidget> UI_MainHallBPRef(TEXT("/Game/UI/HallLevel/UIBP_MainHall.UIBP_MainHall_C"));
+    const ConstructorHelpers::FClassFinder<UUI_MainHall> UI_MainHallBPRef(TEXT("/Game/UI/HallLevel/UIBP_MainHall.UIBP_MainHall_C"));
     UIMainHallClass = UI_MainHallBPRef.Class;
 }
 
@@ -17,7 +17,7 @@ void ATowerDefenceHallHUD::BeginPlay()
     Super::BeginPlay();
     if (UIMainHallClass)
     {
-        UIMainHall = Cast<UUI_MainHall>(CreateWidget(GetWorld(), UIMainHallClass));
+        UIMainHall = CreateWidget<UUI_MainHall>(GetWorld(), UIMainHallClass);
         UIMainHall->AddToViewport();
     }
 }

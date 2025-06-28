@@ -18,7 +18,7 @@ public:
     virtual void BeginPlay() override;
 
 private:
-    TSubclassOf<UUserWidget> UIMainHallClass{};
+    TSubclassOf<UUI_MainHall> UIMainHallClass{};
 
     UPROPERTY()
     UUI_MainHall* UIMainHall{};
